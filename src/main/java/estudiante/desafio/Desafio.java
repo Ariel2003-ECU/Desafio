@@ -1,5 +1,7 @@
 package estudiante.desafio;
 
+import estudiante.desafio.clases.NavegadorHistorial;
+
 /**
  *
  * @author ariel
@@ -7,6 +9,18 @@ package estudiante.desafio;
 public class Desafio {
 
     public static void main(String[] args) {
-        System.out.println("Esta porqueria del Git y Git Hub, me costó mas que pasarse el Touhou 17 en dificíl");
+        NavegadorHistorial Historial =new NavegadorHistorial();
+        
+        //Simular la navegación
+        Historial.VisitarPagina("google.com");
+        Historial.VisitarPagina("steam.com");
+        Historial.VisitarPagina("x.com");
+        
+        Historial.irAtras();
+        Historial.irAtras();
+        Historial.irAdelante();
+        
+        Historial.VisitarPagina("youtube.com");
+        Historial.MostrarHistorial();
     }
 }
